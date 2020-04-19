@@ -10,6 +10,7 @@ public class MyArrayList<E> {
         element = new Object[capacity];
     }
     public void addFirst(E e){
+        ensureCapacity();
         for( int i= size; i>0; i--){
             element[i] = element[i-1];
         }
@@ -17,6 +18,7 @@ public class MyArrayList<E> {
         size++;
     }
     public void add(E e){
+        ensureCapacity();
         element[size] = e;
         size++;
     }
